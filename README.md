@@ -11,7 +11,7 @@ Built with:
 
 ## 🚀 Live Demo
 
-👉 [Click to try the app](https://your-username-your-repo-name.streamlit.app)  
+👉 [Click to try the app](https://introvert-or-extrovert.streamlit.app/)  
 *(Replace with your actual Streamlit Cloud URL after deployment)*
 
 ---
