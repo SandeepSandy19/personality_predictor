@@ -1,11 +1,5 @@
-# 🤩 Project Overview
-"""
-This notebook builds a classifier to predict personality (Introvert/Extrovert) from behavioral traits.
-We will load the dataset, preprocess it, perform exploratory analysis, train a machine learning model,
-and save it for integration into a Streamlit application.
-"""
 
-# 📥 Data Loading
+#  Data Loading
 import pandas as pd
 
 # Load the dataset
@@ -17,7 +11,7 @@ df = df.dropna()
 # Preview the data
 df.head()
 
-# 🥹 Data Preprocessing
+#  Data Preprocessing
 from sklearn.preprocessing import LabelEncoder
 
 # Encode yes/no columns
@@ -30,7 +24,7 @@ for col in yes_no_cols:
 personality_map = {"introvert": 0, "extrovert": 1}
 df["personality"] = df["personality"].map(personality_map)
 
-# 📊 Exploratory Data Analysis (EDA)
+#  Exploratory Data Analysis (EDA)
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -38,7 +32,7 @@ sns.countplot(x="personality", data=df)
 plt.title("Personality Distribution")
 plt.show()
 
-# 🏋️ Model Training
+# Model Training
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
@@ -54,21 +48,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
 
-# 📈 Model Evaluation
+#  Model Evaluation
 y_pred = model.predict(X_test)
 print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
-# 📆 Save the Model
+#  Save the Model
 import joblib
 joblib.dump(model, "../app/model.pkl")
 
-# ✅ Summary & Next Steps
-"""
-- Dropped 423 rows with missing values.
-- Model trained and evaluated successfully.
-- Random Forest performed classification on introvert/extrovert labels.
-- Saved model as model.pkl for use in the Streamlit app.
-
-Next: Build the Streamlit-based Personality Bot that uses this model.
-"""
