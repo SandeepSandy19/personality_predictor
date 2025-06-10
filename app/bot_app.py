@@ -5,9 +5,9 @@ import numpy as np
 # Load the trained XGBoost model
 model = joblib.load("app/xgboost_model.pkl")
 
-st.set_page_config(page_title="Personality Predictor Bot", page_icon="🧠")
-st.title("🧠 Personality Prediction Bot")
-st.markdown("Enter the details below to predict whether the person is an Introvert or Extrovert.")
+st.set_page_config(page_title="Personality Predictor", page_icon="🧠")
+st.title("🧠 Personality Prediction...")
+st.markdown("Enter the details below to predict whether You are an Introvert or Extrovert.")
 
 # Input fields
 col1, col2 = st.columns(2)
@@ -41,4 +41,4 @@ features = np.array([
 if st.button("Predict Personality"):
     prediction = model.predict(features)[0]
     result = "🧍‍♂️ Introvert" if prediction == 0 else "🧑‍🤝‍🧑 Extrovert"
-    st.success(f"Predicted Personality: {result}")
+    st.success(f"Your Personality : {result}")
