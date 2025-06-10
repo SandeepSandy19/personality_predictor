@@ -25,18 +25,6 @@ Source: [Kaggle - Extrovert vs. Introvert Behavior Data](https://www.kaggle.com/
 
 ---
 
-## 📁 Project Structure
-
-📦 personality-predictor
-├── app/
-│ ├── bot_app.py # Streamlit app
-│ ├── model.pkl # Trained XGBoost model
-├── model_training.ipynb # Jupyter Notebook for training
-├── requirements.txt # Dependencies
-└── README.md # Project documentation
-
-
-
 ---
 
 ## ⚙️ Features Used for Prediction
