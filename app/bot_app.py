@@ -42,3 +42,14 @@ if st.button("Predict Personality"):
     prediction = model.predict(features)[0]
     result = "🧍‍♂️ Introvert" if prediction == 0 else "🧑‍🤝‍🧑 Extrovert"
     st.success(f"Your Personality : {result}")
+
+st.markdown(
+    """
+    <hr style="margin-top: 3rem; margin-bottom: 1rem">
+    <div style="text-align: center; font-size: 14px;">
+        Made by <strong>Sandeep Reddy</strong>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
