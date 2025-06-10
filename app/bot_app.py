@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load the trained XGBoost model
-model = joblib.load("xgboost_model.pkl")
+model = joblib.load("app/xgboost_model.pkl")
 
 st.set_page_config(page_title="Personality Predictor Bot", page_icon="🧠")
 st.title("🧠 Personality Prediction Bot")
